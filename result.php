@@ -26,11 +26,11 @@ include('db_connect.php.inc');
 		    	}
 
 		    	$result = array(
-		    				'call_date' => $data1, 
-		    				'client_id' => intval($data2),
-		    				'call_lapse' => $data3,
-		    				'comment' => trim($data4)
-		    				);
+		    			'call_date' => $data1, 
+		    			'client_id' => intval($data2),
+		    			'call_lapse' => $data3,
+		    			'comment' => trim($data4)
+		    			);
 		    }
 		    	$other_result .= "('" . $data1 . "'," . intval($data2). ",'" . $data3. "','" . trim($data4) . "'),";
 
