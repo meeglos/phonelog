@@ -33,7 +33,6 @@ include('db_connect.php.inc');
 		    			);
 		    }
 		    	$other_result .= "('" . $data1 . "'," . intval($data2). ",'" . $data3. "','" . trim($data4) . "'),";
-
 		}    
 		$db = Database::getInstance();
 	    $mysqli = $db->getConnection(); 
