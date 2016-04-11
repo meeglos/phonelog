@@ -1,6 +1,6 @@
 <?php
 /**
- * @Author: miguel
+ * @Author: miglos
  * @Date:   2016-03-31 00:15:30
  * @Last Modified by:   miguel
  * @Last Modified time: 2016-04-04 21:51:34
