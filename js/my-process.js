@@ -2,11 +2,6 @@ $(document).ready(function()
 {
  $(document).on('submit', '#phone-log', function()
  {
-  
-  //var fn = $("#fname").val();
-  //var ln = $("#lname").val();
- 
-  //var data = 'fname='+fn+'&lname='+ln;
 
   var data = $(this).serialize();
   
