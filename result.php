@@ -3,7 +3,7 @@
  * @Author: miguel
  * @Date:   2016-03-31 00:15:30
  * @Last Modified by:   miguel
- * @Last Modified time: 2016-04-14 00:20:19
+ * @Last Modified time: 2016-04-14 00:56:50
  */
 include('db_connect.php.inc');
 include('functions.php');
@@ -12,11 +12,10 @@ include('functions.php');
 		$mylog = $_POST['inputTextarea1'];
 		$input = preg_replace("/((\r?\n)|(\r\n?))/", '**', $mylog);
 		$pieces = explode('**', $input);
-		$b = array(2, 1, 1);
 		foreach($pieces as $part) {
 
 			$a = explode(' ', $part);
-
+		$b = array(2, 1, 1);
 			foreach ($a as $value) {
 				$i = 0;
 				foreach ($b as $num_elem) {
@@ -25,12 +24,14 @@ include('functions.php');
 				}
 
 				$output[] = rtrim(array_reduce(array_slice($a, array_sum($b), count($a)), "array_concat"));
-// var_dump($output);
-// exit();
-			$result = array($output);
+// var_dump($a);
 			}
-
+			$result = array($output);
+// var_dump($result);
+// exit();
+// 
 		}
+		
 /*		$db = Database::getInstance();
 	    $mysqli = $db->getConnection(); 
 
