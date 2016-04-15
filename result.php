@@ -44,7 +44,7 @@ include('functions.php');
                     $mysqli->query($sql) or exit(mysql_error());*/
 	    
 	}
-				var_dump($result);
+				echo serialize($result);
 ?>
 
 
