@@ -14,21 +14,21 @@
 	    return $carry;
 	}
 
-	function mysql_insert_array($table, $response_array)
-	{
-		foreach ($response_array as $field => $value) {
-			$fields[] = '' . $field . '';
-			$values[] = "'" . mysqli_real_escape_string($value) . "'";
-		}
-		$field_list = implode(',', $fields);
-		$value_list = implode(', ', $values);
-
-
-		$query = "INSERT INTO '" . $table . "' (" . $field_list . ") VALUES (" . $value_list . ")";
-		if (!$query) {
-			$message = mysqli_error();
-			die($message);
-		}
+//	function mysql_insert_array($table, $response_array)
+//	{
+//		foreach ($response_array as $field => $value) {
+//			$fields[] = '' . $field . '';
+//			$values[] = "'" . mysqli_real_escape_string($value) . "'";
+//		}
+//		$field_list = implode(',', $fields);
+//		$value_list = implode(', ', $values);
+//
+//
+//		$query = "INSERT INTO '" . $table . "' (" . $field_list . ") VALUES (" . $value_list . ")";
+//		if (!$query) {
+//			$message = mysqli_error();
+//			die($message);
+//		}
 
 //		if ($response_array[0] == 1) {
 //			$table = "payments_received";
