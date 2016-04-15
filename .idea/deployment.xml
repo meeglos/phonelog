@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="phonelog.app" />
+  <component name="PublishConfigData" serverName="Phone Log" uploadOnCheckin="03650861-8676-4c8a-accc-e3b161150d91">
+    <option name="myUploadOnCheckinName" value="phonelog.app" />
+  </component>
 </project>

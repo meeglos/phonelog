@@ -12,36 +12,36 @@ include('functions.php');
 		$mylog = $_POST['inputTextarea1'];
 		$input = preg_replace("/((\r?\n)|(\r\n?))/", '**', $mylog);
 		$pieces = explode('**', $input);
+		$fields = array('date', 'process_id', 'process_time', 'comments');
+
 		foreach($pieces as $part) {
 
 			$a = explode(' ', $part);
-		$b = array(2, 1, 1);
-			foreach ($a as $value) {
-				$i = 0;
-				foreach ($b as $num_elem) {
-					$output[] = rtrim(array_reduce(array_slice($a, $i, $num_elem), "array_concat"));
-					$i += $num_elem;
-				}
+			$b = array(2, 1, 1);
+			$i = 0;
+			unset($output);
 
-				$output[] = rtrim(array_reduce(array_slice($a, array_sum($b), count($a)), "array_concat"));
-// var_dump($a);
+			foreach ($b as $num_elem) {
+				$output[] = rtrim(array_reduce(array_slice($a, $i, $num_elem), "array_concat"));
+				$i += $num_elem;
 			}
-			$result = array($output);
-// var_dump($result);
-// exit();
-// 
-		}
-		
-/*		$db = Database::getInstance();
-	    $mysqli = $db->getConnection(); 
 
-	    	$daata = substr($other_result,0,-1);
-	    	$sql = "INSERT INTO logs (call_date, client_id, call_lapse, comment)  values ";
-	    	$sql .= $daata;
+			$output[] = rtrim(array_reduce(array_slice($a, array_sum($b), count($a)), "array_concat"));
 
-	    	echo $sql;
-	
-	    	$mysqli->query($sql) or exit(mysql_error());*/
+            $result[] = array_combine($fields, $output);
+        }
+
+
+        /*		$db = Database::getInstance();
+                $mysqli = $db->getConnection();
+
+                    $daata = substr($other_result,0,-1);
+                    $sql = "INSERT INTO logs (call_date, client_id, call_lapse, comment)  values ";
+                    $sql .= $daata;
+
+                    echo $sql;
+
+                    $mysqli->query($sql) or exit(mysql_error());*/
 	    
 	}
 				var_dump($result);
