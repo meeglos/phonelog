@@ -30,9 +30,9 @@
 			die($message);
 		}
 
-		if ($response_array[0] == 1) {
-			$table = "payments_received";
-			mysql_insert_array($table, $response_array);
-		}
+//		if ($response_array[0] == 1) {
+//			$table = "payments_received";
+//			mysql_insert_array($table, $response_array);
+//		}
 	}
 ?>	
