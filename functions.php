@@ -33,10 +33,6 @@
 		}
         $mysqli->query($query) or exit(mysqli_error());
 
-		/*if ($response_array[0] == 1) {
-			$table = "payments_received";
-			mysql_insert_array($table, $response_array);
-		}*/
 	}
 
     function getArrayKeys($array)
