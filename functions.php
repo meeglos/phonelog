@@ -31,7 +31,11 @@
 			$message = mysqli_error();
 			die($message);
 		}
-        $mysqli->query($query) or exit(mysqli_error());
+        $final = $mysqli->query($query) or exit(mysqli_error());
+
+        if ($final) {
+            return "OK";
+        }
 
 	}
 
@@ -51,4 +55,17 @@
             $resultValues[] = '("' . $sub['call_date'] . '", "' . $sub['client_id'] . '", "' . $sub['call_lapse'] . '", "' . $sub['comment'] . '")';
         }
         return $resultValues;
+    }
+
+    function getTotalCalls() {
+        $db = Database::getInstance();
+        $mysqli = $db->getConnection();
+
+        $query_GTC = "SELECT count(*) as total FROM logs";
+        $result_gtc = $mysqli->query($query_GTC) or exit(mysqli_error());
+        if ($result_gtc->num_rows > 0) {
+            while ($row = $result_gtc->fetch_assoc()) {
+                echo $row["total"];
+            }
+        }
     }

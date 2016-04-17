@@ -2,10 +2,7 @@ $(document).ready(function()
 {
  $(document).on('submit', '#phone-log', function()
  {
-
   var data = $(this).serialize();
-  
-  
   $.ajax({
   
   type : 'POST',

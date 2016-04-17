@@ -14,6 +14,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!-- <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
@@ -60,38 +61,39 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+<!--    <div class="jumbotron">
       <div class="container">
         <h3>Please, save your data!</h3>
         <p><a class="btn btn-primary btn-sm" href="#" role="button">Learn more &raquo;</a></p>
       </div>
-    </div>
+    </div>-->
+
+
 
     <div class="container">
-      <!-- Example row of columns -->
+    <!-- Example row of columns -->
       <div id="form" class="result">
-	      <form class="form-horizontal" id="phone-log" name="phone-log" method="post">
-	        <div class="form-group">
-	          <label for="inputTextarea1" class="col-sm-2 control-label">Phone log data.<br>Enter a maximun of 50 lines, otherwise it'll be cropped to that line.</label>
-	          <div class="col-sm-10">
-	            <textarea class="form-control" id="inputTextarea1" name="inputTextarea1" rows="15"></textarea>
-	          </div>
-	        </div>
+        <form class="form-horizontal" id="phone-log" name="phone-log" method="post">
+          <div class="form-group">
+            <label for="inputTextarea1" class="col-sm-2 control-label">Phone log data.<br>Enter a maximun of 50 lines, otherwise they'll be cropped to that line.</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="inputTextarea1" name="inputTextarea1" rows="15"></textarea>
+            </div>
+          </div>
 
-	        <div class="form-group">
-	          <div class="col-sm-offset-2 col-sm-10">
-	            <button type="submit" class="btn btn-default">Save</button>
-	          </div>
-	        </div>
-	      </form>
-	  </div>  
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
       <hr>
 
       <footer>
         <p>&copy; 2016 codde.it | All rights reserved except where mentioned.</p>
       </footer>
     </div> <!-- /container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

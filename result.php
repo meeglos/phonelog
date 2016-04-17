@@ -32,4 +32,18 @@ $table = "logs";
             $result[] = array_combine($fields, $output);
         }
     }
-        mysqlInsertArray($table, $result);
+
+    if (mysqlInsertArray($table, $result) == 'OK') {
+
+        echo "<div id='my-data'>";
+
+            echo "<h3>Call info</h3>";
+            echo "<ul>";
+                echo "<li>Total calls: " . getTotalCalls() . "</li>";
+/*                echo "<li>This week: " . getThisWeekCalls() . "</li>";
+                echo "<li>Last week: " . getLastWeekCalls() . "</li>";
+                echo "<li>Today: " . getTodaysCalls() . "</li>";*/
+            echo "</ul>";
+
+        echo "</div>";
+    }
